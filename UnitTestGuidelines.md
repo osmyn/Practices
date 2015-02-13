@@ -17,10 +17,10 @@ the result of that unit. It's readable by having a good name that describes the 
 
 **UnitOfWork\_Scenario\_ExpectedBehavior**
 
-*	Unit of Work name of method or the description of the unit of work, such as "Login"
-*	Scenario the conditions being tested, such as "InvalidUser" or a description of the parameters 
+*	Unit of Work - name of method or the description of the unit of work, such as "Login"
+*	Scenario - the conditions being tested, such as "InvalidUser" or a description of the parameters 
 being passed into the unit of work
-*	Expected behavior your expected result, such as "UserNotFoundMessage"
+*	Expected behavior - your expected result, such as "UserNotFoundMessage"
 
 
 Use readability as your guide to the name; the test name should read like a sentence with no ands and 
