@@ -6,21 +6,19 @@ It's important to have a common language when talking about testing strategies s
 understand each other's preferences without confusion over what each other think of as a unit test.
 
 ### Unit of Work ###
-Everything that can happen from invoking a public method to it returning after it's finished; can include 
-traversing multiple classes and methods and covering multiple scenarios.
+Everything that happens from invoking a public method to it returning the results after it's finished; it’s the work done along the path you see the debugger take through your code.
 
 ### Unit Test ###
-Automated code that invokes a unit of work for one specific scenario and checks an assumption about 
-the result of that unit. It's readable by having a good name that describes the scenario it tests.
+Code that invokes a unit of work within the confines of a project layer while faking external dependencies and validates an assumption about one specific scenario. 
 
 *Naming convention*
 
-**UnitOfWork\_Scenario\_ExpectedBehavior**
+**UnitOfWork\_InitialCondition\_ExpectedResult**
 
 *	Unit of Work - name of method or the description of the unit of work, such as "Login"
-*	Scenario - the conditions being tested, such as "InvalidUser" or a description of the parameters 
+*	Initial Condition - the conditions being tested, such as "InvalidUser" or a description of the parameters 
 being passed into the unit of work
-*	Expected behavior - your expected result, such as "UserNotFoundMessage"
+*	Expected Result - your expected outcome, such as "UserNotFoundMessage"
 
 
 Use readability as your guide to the name; the test name should read like a sentence with no ands and 
@@ -33,6 +31,8 @@ Login\_InvalidUser\_UserNotFoundMessage
 UpdateDisplayOrder\_MoveFirst\_MovesToFirstPosition
 
 ValidateWorkPhaseSEctionEstimateDetails\_WithErrors\_ReturnsSuccessIsFalse
+
+To make this very easy, you can install this [unit test snippet](https://gist.github.com/osmyn/906c917653a30864cb52dee02c36c14e) in Visual Studio to stub out your unit tests for you.
 
 ### Integration Test ###
 While unit tests fake dependencies to test scenarios in the unit of work, an integration test uses real 
@@ -143,7 +143,7 @@ thinking about good testing habits, hence the name of the blog. Here are some ex
 (file, database, system time)
 - [ ] The test does not invoke private methods
 - [ ] The test name is easy to read 
-(MethodName\_Scenario\_ExpectedBehavior)
+(UnitOfWork\_InitialCondition\_ExpectedResult)
 - [ ] The test does not check interactions where value or state change 
 checks could be used for full coverage
 - [ ] The test only checks one of: value result, state change, or 
@@ -159,8 +159,8 @@ fakes
 
 ## Overall ##
 
-- [ ] The tests cover 100% of the code changed and cover common and 
-edge-case behaviors
-- [ ] The tests don't repeat code that could be refactored into setup or 
+- [ ] The tests cover the common scenarios and some corner cases if practical
+- [ ] The tests don't repeat code that could be refactored into builder or 
 factory methods
+
 
