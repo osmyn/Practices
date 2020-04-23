@@ -1,7 +1,7 @@
 # Unit Testing Guidelines #
 The guidelines in this document are based on recommendations from [Art of Unit Testing](http://osmy.in/1Dpu9Nc "Art of Unit Testing") by Roy Osherove (2013), and the [Testing on the Toilet](http://osmy.in/1AjT0k0 "Testing on the Toilet") blog by Google. 
 
-I have also created a [2-hour course on unit testing at Pluralsight](http://osmy.in/EffectiveCSharpUnitTesting) and a [90-min course for Microsoft on Pluralsight](https://www.pluralsight.com/courses/microsoft-azure-unit-integration-testing-performing) which cover these topics in depth.
+I have also created a [2-hour course on unit testing at Pluralsight](https://www.pluralsight.com/courses/csharp-unit-testing-enterprise-applications) and a [90-min course for Microsoft on Pluralsight](https://www.pluralsight.com/courses/microsoft-azure-unit-integration-testing-performing) which cover these topics in depth.
 
 ## Definitions ##
 It's important to have a common language when talking about testing strategies so that we can 
